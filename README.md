@@ -26,10 +26,11 @@ Follow these steps to install the extension:
 | Step | Action                                                                                                   |
 |------|----------------------------------------------------------------------------------------------------------|
 | 1️⃣   | **Download the Extension**: Download the `.zip` file or clone the source code.                           |
-| 2️⃣   | **Open Your Browser**: Go to `chrome://extensions/` (or `edge://extensions/`, `brave://extensions/`).    |
-| 3️⃣   | **Enable Developer Mode**: Switch on "Developer mode" at the top right.                                  |
-| 4️⃣   | **Load Extension**: Click "Load unpacked" and select the extension folder or `.zip` file.                |
-| 5️⃣   | **Done!** You should now see the extension icon in your toolbar.                                         |
+| 2️⃣   | **Extract the Folder**: Extract the `.zip` file into an easily accesible folder.                         |
+| 3️⃣   | **Open Your Browser**: Go to `chrome://extensions/` (or `edge://extensions/`, `brave://extensions/`).    |
+| 4️⃣   | **Enable Developer Mode**: Switch on "Developer mode" at the top right.                                  |
+| 5️⃣   | **Load Extension**: Click "Load unpacked" and select the extension folder you extracted.                 |
+| 6️⃣   | **Done!** You should now see the extension icon in your toolbar.                                         |
 
 ---
 
@@ -37,6 +38,7 @@ Follow these steps to install the extension:
 
 ### 🌍 **Normal Google Search**  
 Use Google as you normally would! The extension cleans URLs in the background based on your preferences.  
+If you are met with captchas everytime you search, this is NORMAL. Turning off user-agent spoofing will reduce the captcha difficulty (Yes, i'm being serious, there's difficulties).  
 
 ### 🖱 **Context Menu Search**  
 - Highlight any text on a webpage.  
