@@ -12,7 +12,7 @@
 | 🛑 **Cookie Management**              | Blocks specific tracking cookies (`NID`, `CONSENT`, `1P_JAR`, etc.). Optional auto-clear on every new search.           |
 | 🔒 **Privacy Headers**                | Adds `DNT: 1` (Do Not Track) and `Sec-GPC: 1` (Global Privacy Control) headers.                                        |
 | 📋 **Header Modification**            | Removes headers like `X-Client-Data`, `Cookie`, and `Referer` to reduce shared info.                                   |
-| 👥 **User-Agent Spoofing (Optional)** | Spoofs the User-Agent string to a generic Chrome version to minimize fingerprinting.                                    |
+| 👥 **User-Agent Spoofing** | Spoofs the User-Agent string to a generic Chrome version to minimize fingerprinting.                                    |
 | 🔄 **Global Enable/Disable Toggle**   | Easily enable or disable the extension via a toggle in the options menu.                                               |
 | 🔍 **Context Menu Search**            | Right-click text and select "Search with Clean Google" for an automatic cleaned search.                                 |
 | 🛠️ **Debug Mode**                     | Logs extension activity for troubleshooting.                                                                           |
@@ -38,7 +38,8 @@ Follow these steps to install the extension:
 
 ### 🌍 **Normal Google Search**  
 Use Google as you normally would! The extension cleans URLs in the background based on your preferences.  
-If you are met with captchas everytime you search, this is NORMAL. Turning off user-agent spoofing will reduce the captcha difficulty (Yes, i'm being serious, there's difficulties).  
+  
+- If you are met with captchas everytime you search, this is NORMAL. Turning off user-agent spoofing will reduce the captcha difficulty (Yes, i'm being serious, there's difficulties).  
 
 ### 🖱 **Context Menu Search**  
 - Highlight any text on a webpage.  
