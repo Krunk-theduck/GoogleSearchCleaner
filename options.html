@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Google Search Cleaner Settings</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      <i class="fas fa-cog"></i>
+      Google Search Cleaner Settings
+      <div class="status-indicator status-active" id="extensionStatus"></div>
+    </h1>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-power-off"></i>
+        Extension Status
+      </div>
+      <div id="extensionStatusToggle" class="param-container">
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-shield-alt"></i>
+        Privacy Features
+      </div>
+      <div id="privacyFeatures"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-cookie-bite"></i>
+        Cookie Management
+      </div>
+      <div id="cookieManagement"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-filter"></i>
+        URL Parameters
+      </div>
+      <div id="paramsList"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <i class="fas fa-code"></i>
+        Header Management
+      </div>
+      <div id="headerManagement"></div>
+    </div>
+
+    <div class="section" id="debugSection" style="display: none;">
+      <div class="section-title">
+        <i class="fas fa-bug"></i>
+        Debug Log
+      </div>
+      <div class="debug-log" id="debugLog"></div>
+    </div>
+
+    <div class="button-group">
+      <button id="save" class="button primary-button">
+        <i class="fas fa-save"></i>
+        Save Settings
+      </button>
+      <button id="reset" class="button secondary-button">
+        <i class="fas fa-undo"></i>
+        Reset to Defaults
+      </button>
+      <button id="toggleDebug" class="button secondary-button">
+        <i class="fas fa-bug"></i>
+        Toggle Debug
+      </button>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+
+</html>

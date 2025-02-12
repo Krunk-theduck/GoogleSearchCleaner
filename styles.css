@@ -1,0 +1,250 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #1a73e8;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.section-title i {
+  margin-right: 0.5rem;
+}
+
+.param-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.param-item:hover {
+  background: #f8f9fa;
+}
+
+.param-checkbox {
+  margin-right: 1rem;
+}
+
+.param-label {
+  flex: 1;
+}
+
+.param-description {
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.primary-button {
+  background: #1a73e8;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #1557b0;
+}
+
+.secondary-button {
+  background: #6c757d;
+  color: white;
+}
+
+.secondary-button:hover {
+  background: #5a6268;
+}
+
+.debug-log {
+  font-family: monospace;
+  background: #272822;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.debug-entry {
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
+}
+
+.debug-error {
+  color: #ff6188;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #1a73e8;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.status-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.status-active {
+  background: #28a745;
+}
+
+.status-inactive {
+  background: #dc3545;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.section-title.debug-mode-active {
+    animation: debugModeHighlight 0.5s ease-in-out; /* Animation for Debug Mode title */
+}
+
+@keyframes debugModeHighlight {
+    0%, 100% { color: inherit; background-color: transparent; } /* Back to normal color */
+    50% { color: #ff6f61; background-color: #f8f8f8; } /* Highlight color (adjust as needed) */
+}
+
+.button.save-feedback {
+    animation: saveButtonFeedback 0.5s ease-in-out; /* Animation for Save Button */
+}
+
+@keyframes saveButtonFeedback {
+    0%, 100% { transform: scale(1); background-color: var(--primary-button-color); color: white; } /* Back to normal */
+    50% { transform: scale(1.1); background-color: #5cb85c; color: white; } /* Highlight color/scale (adjust as needed) - Success green */
+}
+
+
+/* Popup Message Styles */
+.popup-message {
+    position: absolute; /* Position relative to the button or section */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Fade and slide animation */
+    transform: translateY(-10px); /* Start slightly above */
+    pointer-events: none; /* Don't interfere with clicks */
+    z-index: 10; /* Ensure it's on top of other elements */
+}
+
+.popup-message.show {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide to final position */
+}
