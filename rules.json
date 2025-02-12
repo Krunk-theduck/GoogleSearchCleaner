@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "priority": 1,
+      "action": {
+        "type": "redirect",
+        "redirect": {
+          "transform": {
+            "queryTransform": {
+              "removeParams": [
+                "sourceid", "rlz", "ie", "ved", "sa",
+                "usg", "bih", "biw", "oq", "gs_l", "client"
+              ],
+              "addOrReplaceParams": [
+                { "key": "peek_pws", "value": "0" },
+                { "key": "pws", "value": "0" }
+              ]
+            }
+          }
+        }
+      },
+      "condition": {
+        "urlFilter": "||google.com/search",
+        "resourceTypes": ["main_frame"]
+      }
+    }
+  ]

@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Google Search Cleaner",
+    "version": "1.0",
+    "description": "Cleans Google search requests by stripping unnecessary parameters and disabling personalized results.",
+    "permissions": [
+        "declarativeNetRequest",
+        "declarativeNetRequestWithHostAccess",
+        "storage",
+        "contextMenus"
+    ],
+    "host_permissions": [
+        "*://*.google.com/*",
+        "*://google.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": true
+    },
+    "icons": {
+        "16": "icon16.png"
+    },
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset_1",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    }
+}
