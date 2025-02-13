@@ -1,4 +1,4 @@
-const DEBUG = true;
+const DEBUG = false;
 
 class ExtensionDebugger {
   static log(message, data = null) {
